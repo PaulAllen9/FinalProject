@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Paul">
+  <meta name="description" content="Module 5 Assignment">
+  <title>Story Generator</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="storyGenerator.js"></script>
+</head>
+
+<body>
+  <section id = "pageOne">
+    <h1>Story Generator</h1>
+    <p>Enter approptiate values in all of the text boxes. Then click the <span class= "Tahoma">Done</span> button to generate a story with your entered values plugged into it.</p>
+    <br>
+  
+      <form class ="table" id= "words">
+        <div class="row"><label for="noun">noun:</label><input type="text" id ="noun"> </div>
+        
+        <div class="row"><label for="pvt1">past tense verb:</label><input type="text" id="pvt1"> </div>
+        
+        <div class="row"><label for="adj1">adjective:</label><input type="text" id ="adj1" > </div>
+        
+        <div class="row"><label for="pvt2">past tense verb:</label><input type="text" id="pvt2"> </div>
+        
+        <div class="row"><label for="adj2">adjective:</label><input type="text" id ="adj2"> </div>
+        
+      </form>
+    <br>
+    <input type="button" form="words" value="Done" onclick="addWordsToStory(this.form);">
+    <input type="button" form="words" value= "Reset" onclick="form.reset();">
+  </section>
+  <section class= "invisible" id ="pageTwo">
+    
+    <div class="story" id="returnStory">
+      
+    </div>
+    <p class = "story">The End</p>
+    <input type="button" value="Return" onclick="toggleVisibility();">
+    
+  </section>
+
+
+
+  
+  
+
+</body>
+
+</html>
